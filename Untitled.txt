@@ -1,0 +1,24 @@
+
+Project e-banking 
+Components..................
+Header component = Welcome to E-Banking
+TopMenu component = Navbar
+Footer component = footer section
+Login in home page
+Pages ......................
+Home page /Login Page
+Registration Page
+first name  , last name   , address , city , mobile , email , we get password through backend
+
+
+
+
+ model 
+{
+keys
+},
+    
+{
+timestamps
+}
+gmail password = bgek arhk vfag qypw

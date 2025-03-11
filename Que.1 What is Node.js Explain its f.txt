@@ -1,0 +1,26 @@
+Que.1 What is Node.js? Explain its features and advantages ?
+
+Ans : Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript code outside the browser. It is built on Google Chrome's V8 JavaScript engine and is commonly used for building scalable, high-performance network applications, especially web servers and APIs.
+
+*Features of Node.js:
+Asynchronous & Event-Driven
+
+1. Node.js follows a non-blocking I/O model, allowing multiple tasks to be handled concurrently without waiting for one to finish before starting another.
+Single-Threaded but Highly Scalable
+
+2. Uses a single-threaded event loop to handle multiple connections efficiently, making it lightweight and scalable for real-time applications.
+Fast Execution
+
+3. Built on the V8 engine, Node.js converts JavaScript code into machine code, leading to high-speed execution.
+Cross-Platform Compatibility
+
+4. Works on Windows, macOS, and Linux, allowing developers to write and run JavaScript code across different environments.
+NPM (Node Package Manager)
+
+*Advantages of Node.js :
+1. High Performance.
+2. Uses JavaScript for Both Frontend & Backend.
+3. Active Community & Rich Ecosystem.
+4. Scalability.
+5. Cost-Effective.
+6. Real-time Applications.
