@@ -4,13 +4,21 @@ const nodemailer = require("nodemailer");
 
 const costumerRegistration = async (req, res) => {
     const{firstname , lastname , email , mobile , address , city} = req.body;
-    console.log(req.body)
     const myPAss = autoPassword.autoPassword()
+    const customerData = await costumerModel.create({
+      firstname : firstname,
+      lastname : lastname,
+      email : email,
+      city : city,
+      mobile : mobile,
+      address : address,
+      password : myPAss
+  })
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "akashdhok1265@gmail.com", //user password 
+          user: "akashdhok1265@gmail.com",
           pass: "bgek arhk vfag qypw", 
         },
       });
@@ -22,17 +30,29 @@ const costumerRegistration = async (req, res) => {
       }
       transporter.sendMail(maildetails )
       console.log("mail send successfully")
-    // const data = await costumerModel.create({
-    //     firstname : firstname,
-    //     lastname : lastname,
-    //     email : email,
-    //     city : city,
-    //     mobile : mobile,
-    //     address : address
-    // })
-    res.send("okk")
+  
+    res.send("your password sent into your email account")
 }
 
+const costumerLogin  = async(req , res)=>{
+ const{email , password} = req.body
+ const data = await costumerModel.findOne({email : email})
+try {
+  if(!data)
+  {
+    return res.status(400).send("Invalid email")
+  }
+  if(data.password !=password)
+  {
+    return res.status(400).send("Invalid password")
+  }
+  res.status(200).send(data)
+} catch (error) {
+  res.status(400).send(error)
+}
+
+}
 module.exports = {
-    costumerRegistration
+    costumerRegistration,
+    costumerLogin
 }

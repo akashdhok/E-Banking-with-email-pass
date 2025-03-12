@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import BASE_URL from '../config/config';
 import axios from "axios"
+import {useNavigate} from "react-router-dom"
 const Registration = () => {
   const[input , setInput] = useState({})
+  const navigate = useNavigate()
 const changeHandler = (e)=>{
   let{name , value} = e.target;
   setInput({
@@ -19,7 +21,7 @@ const submitHandler = async(e)=>{
   try {
   
     const res = await axios.post(api , input)
-    console.log(res.data)
+    alert(res.data)
     alert("User Registered Successfully..!!")
   } catch (error) {
     console.log(error)
