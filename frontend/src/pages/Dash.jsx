@@ -56,13 +56,13 @@ const navigate = useNavigate()
       </div>
     </Container>
   </Navbar>
-  <Container className="mt-5">
+  <Container className="mt-3">
     <Row className="justify-content-center">
       <Col md={8} lg={6}>
         <Card className="shadow-lg text-center p-4 border-0 rounded-4">
           <Card.Body>
-            <h1 className="fw-bold text-primary">Welcome, {username}!</h1>
-            <p className="text-muted fs-5">Your email is <strong>{email}</strong></p>
+            <h6 className="fw-bold text-primary">Welcome, {username}!</h6>
+            <p className="text-muted fs-9">Your email is {email}</p>
           </Card.Body>
         </Card>
       </Col>

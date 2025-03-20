@@ -1,7 +1,7 @@
 const costumerModel = require("../model/costumerModel")
 const autoPassword = require("../middleware/autoPassword")
 const nodemailer = require("nodemailer");
-
+const transactionModel =require("../model/transactionModel")
 const costumerRegistration = async (req, res) => {
     const{firstname , lastname , email , mobile , address , city} = req.body;
     const myPAss = autoPassword.autoPassword()
@@ -52,7 +52,24 @@ try {
 }
 
 }
+
+const DepositData = async(req ,res)=>{
+  const{amount , status , customerid} = req.body;
+  const data = await transactionModel.create({
+    amount : amount,
+    status : status,
+    customerid : customerid
+  })
+res.status(200).send(data)
+}
+const balanceDisplay = async(req , res)=>{
+  const {userid} = req.query
+  const data = await transactionModel.find({customerid : userid})
+  res.status(200).send(data)
+}
 module.exports = {
     costumerRegistration,
-    costumerLogin
+    costumerLogin,
+    DepositData,
+    balanceDisplay
 }
