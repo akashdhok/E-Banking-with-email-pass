@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import BASE_URL from '../config/config'
 import axios from 'axios'
-import { Container, Row, Col, Card, Button, Alert } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+
 
 const BalanceInquiry = () => {
   const [balance, setBalance] = useState([])
