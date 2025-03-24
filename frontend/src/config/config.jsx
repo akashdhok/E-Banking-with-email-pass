@@ -1,4 +1,4 @@
-const BASE_URL = "https://e-banking-with-email-pass-1.onrender.com" 
+const BASE_URL = "https://e-banking-with-email-pass-2.onrender.com" 
 
 
 
