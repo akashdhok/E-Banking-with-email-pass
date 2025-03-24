@@ -67,6 +67,7 @@ const balanceDisplay = async(req , res)=>{
   const data = await transactionModel.find({customerid : userid})
   res.status(200).send(data)
 }
+
 module.exports = {
     costumerRegistration,
     costumerLogin,
