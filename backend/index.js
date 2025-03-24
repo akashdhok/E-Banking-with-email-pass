@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
-const cors = require("cors")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 require("dotenv").config()
 const Port = process.env.PORT
 const dbConnect = require("./utils/db")   //database connection form utils
