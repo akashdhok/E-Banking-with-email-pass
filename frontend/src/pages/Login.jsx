@@ -41,12 +41,12 @@ const Login = () => {
           <Form>
             <Form.Group className="mb-3" controlId="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" name='email' onChange={changeHandler}  />
+              <Form.Control type="email" placeholder="Enter your email" name='email' autoComplete="email" onChange={changeHandler}  />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="mobile">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Enter your password" name='password'  onChange={changeHandler} />
+              <Form.Control type="password" placeholder="Enter your password" name='password'   autoComplete="current-password"  onChange={changeHandler} />
             </Form.Group>
 
             <div className="d-grid">
